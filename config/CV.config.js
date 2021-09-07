@@ -1,0 +1,1 @@
+const pdfPlayerSrc = "imgs/xxx.pdf"
