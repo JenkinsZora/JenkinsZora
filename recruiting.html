@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiting</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/recruiting.css">
+</head>
+<body>
+    <div id="empty"></div>
+    <div id="page">
+        <div id="container">
+            <!-- 导航 -->
+            <div id="nav"></div>
+            <div id="content">
+                <h2 class="title" id="Recruitment"></h2>
+                <div id="RecruitmentList"></div>
+                <div>
+                    <p class="proposalRequirementsTitle" id="proposalRequirements"></p>
+                    <ul id="proposalRequirementsList"></ul>
+                </div>
+                <div id="proposalRequirementsEnd"></div>
+                <div class="splitLine"></div>
+
+                <h2 id="CHSTitle"></h2>
+
+                <div id="CHSRecruitmentList"></div>
+
+                <div>
+                    <p id="CHSPlanTitle"></p>
+                    <div id="CHSPlanContent"></div>
+                </div>
+
+                <p id="linkTip"></p>
+                <p id="link"></p>
+
+                <p id="endTip"></p>
+                <p id="emailTip"></p>
+            </div>
+            
+        </div>
+        <div id="empty"></div>
+        <div class="splitLine"></div>
+        <div id="footer">
+            <p id="footerContent"></p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="config/index.config.js"></script>
+<script src="config/recruiting.config.js"></script>
+<script>
+    getNav()
+    getFooter()
+    getEnTitle()
+    function getNav(){
+        const navDom = document.getElementById('nav')
+        // 获取导航文案
+        const navContent = nav
+        let html = ""
+        for(item of navContent){
+            html += `<a href=${item.path}>${item.title}</a>`
+        }
+        navDom.innerHTML = html
+
+    }
+    function getFooter(){
+        const footerContent = document.getElementById('footerContent');
+        footerContent.innerText = footer.content
+    }
+    getEnTitle()
+    function getEnTitle(){
+        const RecruitmentDom = document.getElementById('Recruitment')
+        RecruitmentDom.innerText = Recruitment
+    }
+
+    getRecruitmentList()
+    function getRecruitmentList(){
+        const RecruitmentListDom = document.getElementById('RecruitmentList');
+        let html = ""
+        for(const item of RecruitmentList){
+            html+=`<p class="RecruitmentListItem">${item}</p>`
+        }
+        RecruitmentListDom.innerHTML = html
+
+        const CHSRecruitmentListDom =  document.getElementById('CHSRecruitmentList');
+        let CHShtml = ""
+        for(const item of CHSRecruitmentList){
+            CHShtml += `<p>${item}</p>`
+        }
+        CHSRecruitmentListDom.innerHTML = CHShtml
+
+        const CHSPlanTitleDom = document.getElementById("CHSPlanTitle")
+        CHSPlanTitleDom.innerText = CHSPlan.title
+
+        const CHSPlanContentDom = document.getElementById('CHSPlanContent');
+        let CHSPlanContentHtml = ""
+        for(const item of CHSPlan.content){
+            CHSPlanContentHtml+= `<div><h3>${item.title}</h3>`
+                for(const ite of item.list){
+                    CHSPlanContentHtml += `<p class="CHSPlanItem">${ite}</p>`
+                }
+            CHSPlanContentHtml += `</div>`
+        }
+        CHSPlanContentDom.innerHTML = CHSPlanContentHtml;
+
+        (document.getElementById('linkTip')).innerText = CHSPlan.linkTip;
+        (document.getElementById('link')).innerText = CHSPlan.link;
+        (document.getElementById('endTip')).innerText = CHSPlan.endTip;
+        (document.getElementById('emailTip')).innerText = CHSPlan.emailTip;
+
+    }
+
+    getproposalRequirements()
+    function getproposalRequirements(){
+        const proposalRequirementsDom = document.getElementById('proposalRequirements')
+        proposalRequirementsDom.innerText = proposalRequirements.title
+    }
+
+    getproposalRequirementsList()
+    function getproposalRequirementsList(){
+        const proposalRequirementsListDom = document.getElementById("proposalRequirementsList");
+        let html = ""
+        for(const item of proposalRequirements.list){
+            html+= `<li >${item}</li>`
+        }
+        proposalRequirementsListDom.innerHTML = html
+    }
+
+    getproposalRequirementsEnd()
+    function getproposalRequirementsEnd(){
+        const proposalRequirementsEndDom = document.getElementById('proposalRequirementsEnd');
+        proposalRequirementsEndDom.innerText = proposalRequirements.end
+    }
+    getCHSTitle()
+    function getCHSTitle(){
+        const CHSTitleDom = document.getElementById('CHSTitle');
+        CHSTitleDom.innerText = CHSTitle
+    }
+
+    
+</script>

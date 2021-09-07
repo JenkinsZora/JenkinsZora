@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBLICATIONS</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/publications.css">
+</head>
+<body>
+    <div id="empty"></div>
+    <div id="page">
+        <div id="container">
+            <!-- 导航 -->
+            <div id="nav"></div>
+            <div id="content">
+                <p id="Note" class="note"></p>
+                <ul id="noteList" class="noteList"></ul>
+            </div>
+            
+        </div>
+        <div id="empty"></div>
+        <div class="splitLine"></div>
+        <div id="footer">
+            <p id="footerContent"></p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="config/index.config.js"></script>
+<script src="config/publications.config.js"></script>
+<script>
+    getNav()
+    getFooter()
+    function getNav(){
+        const navDom = document.getElementById('nav')
+        // 获取导航文案
+        const navContent = nav
+        let html = ""
+        for(item of navContent){
+            html += `<a href=${item.path}>${item.title}</a>`
+        }
+        navDom.innerHTML = html
+
+    }
+    function getFooter(){
+        const footerContent = document.getElementById('footerContent');
+        footerContent.innerText = footer.content
+    }
+
+    getNote()
+    function getNote(){
+        const noteDom = document.getElementById('Note');
+        noteDom.innerText = note
+    }
+
+    getNoteList()
+    function getNoteList(){
+        const noteListDom = document.getElementById('noteList');
+        let html = ""
+        for(const item of noteList){
+            html+=
+                `<li>
+                    <p>${item.text}
+                        <span class="tip">${item.tagging}</span>
+                        <span class="underline">${item.underline}</span>
+                        ${item.end}
+                    </p>
+                </li>`
+            
+        }
+        noteListDom.innerHTML = html
+    }
+</script>
