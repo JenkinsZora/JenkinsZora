@@ -1,0 +1,31 @@
+#nav >a:nth-child(3){
+    color: #333!important;
+}
+#content{
+    width: 800px;
+    margin: 20px auto 0;
+}
+#content>div>.title{
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Quattrocento', serif;
+    line-height: 1.2em;
+}
+#content>div>ul>li{
+    margin-bottom: 25px;
+    line-height: 24px;
+    font-size: 16px;
+    font-family: 'Quattrocento', serif;
+    color: #3e3e3e;
+}
+#content>div>ul>li>.tip{
+    color: #8d2424;
+    font-family: 'Quattrocento', serif;
+    font-size: 16px;
+}
+#content>div>ul>li>.underline{
+    font-family: 'Quattrocento', serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+}

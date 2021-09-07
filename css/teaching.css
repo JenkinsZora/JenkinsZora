@@ -1,0 +1,32 @@
+*{
+    font-family: 'Quattrocento', serif;
+}
+#nav >a:nth-child(4){
+    color: #333!important;
+}
+#content{
+    width: 800px;
+    margin: 20px auto 0;
+}
+#content >.paragraph{
+    width: 100%;
+    margin-bottom: 40px;
+}
+#content >.paragraph>.title{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2em;
+    font-family: 'Quattrocento', serif;
+}
+.childTitle{
+    font-family: 'Quattrocento', serif;
+    color: #3e3e3e;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.text{
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    line-height: 30px;
+}

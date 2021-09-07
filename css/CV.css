@@ -1,0 +1,11 @@
+#nav >a:nth-child(5){
+    color: #333!important;
+}
+
+#content{
+    width: 100%;
+    
+}
+body{
+    overflow: hidden;
+}
