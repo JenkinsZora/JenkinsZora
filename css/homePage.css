@@ -25,6 +25,7 @@
     font-size: 16px;
     line-height: 26px;
     font-family: 'Quattrocento Sans', sans-serif;
+    word-wrap: break-word;
 }
 .line1 .Photo{
     width: 284;
