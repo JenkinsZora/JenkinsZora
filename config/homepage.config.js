@@ -1,7 +1,7 @@
 
 //Research Highlights 内容
 const infoList = [
-    "Ziwen Zu, is an economist working on environmental, development, and governance issues. Currently, he is a tenured associate professor in economics and management & strategy at the University of Hong Kong. He holds a concurrent appointment at the University of Chicago's interdisciplinary Energy Policy Institute (EPIC) and serves as the research director of its China center (EPIC-China). ",
+    "xxxxx, is an economist working on environmental, development, and governance issues. Currently, he is a tenured associate professor in economics and management & strategy at the University of Hong Kong. He holds a concurrent appointment at the University of Chicago's interdisciplinary Energy Policy Institute (EPIC) and serves as the research director of its China center (EPIC-China). ",
     "Guojun He's research tries to address some of the most challenging problems faced by developing countries and seeks to produce empirically-grounded estimates for optimal policy design. The majority of his work focuses on understanding the benefits and costs of environmental policies."
 ]
 
